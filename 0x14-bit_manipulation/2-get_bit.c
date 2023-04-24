@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * get_bit - returns the value of a bit at an in a decimal number
  * @n: number to search
@@ -7,9 +8,13 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-    if (index >= 64)
-    {
-        return -1; // index is out of range
-    }
-    return (n >> index) & 1;
+	int bit_val;
+
+	if (index >= 64)
+	{
+		return (-1);
+	}
+	bit_val = (n >> index) & 1;
+
+	return (bit_val);
 }
